@@ -20,6 +20,10 @@
 				</dict>
 			</array>
 		</dict>
+		<key>Fonts provided by application</key>
+		<array>
+			<string>Balham.otf</string>
+		</array>
 	</dict>
 </dict>
 </plist>
