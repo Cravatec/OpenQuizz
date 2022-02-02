@@ -20,84 +20,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd5-nl-shF">
-                                <rect key="frame" x="107" y="636" width="200" height="80"/>
-                                <color key="backgroundColor" red="0.40517753359999997" green="0.5527241826" blue="0.7668325305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Big-zW-cUy"/>
-                                    <constraint firstAttribute="height" constant="80" id="bBs-pB-tST"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="New Game">
-                                    <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="0CX-xS-r1y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-mF-ab1">
-                                <rect key="frame" x="57" y="275" width="300" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Pfa-e3-2XS"/>
-                                    <constraint firstAttribute="width" constant="300" id="ULM-zC-2hf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-MX-6DN" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="84.666666666666686" y="20" width="245" height="245"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-Ot-jkJ">
+                                <rect key="frame" x="20" y="20" width="374" height="696"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se cache donc le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-LB-FUI">
-                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
-                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-pP-NgO">
-                                        <rect key="frame" x="104.33333333333333" y="202" width="35.999999999999986" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="f92-it-MpR"/>
-                                            <constraint firstAttribute="height" constant="35" id="oSC-mQ-9hb"/>
-                                        </constraints>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-KR-TqJ">
+                                        <rect key="frame" x="37" y="0.0" width="300" height="313"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-MX-6DN" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                                <rect key="frame" x="27.666666666666686" y="0.0" width="245" height="245"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HlC-9J-au7">
+                                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se cache donc le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-LB-FUI">
+                                                                <rect key="frame" x="16" y="0.0" width="196.66666666666666" height="186"/>
+                                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-pP-NgO">
+                                                                <rect key="frame" x="96.333333333333329" y="194" width="35.999999999999986" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="36" id="f92-it-MpR"/>
+                                                                    <constraint firstAttribute="height" constant="35" id="oSC-mQ-9hb"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.75211042169999998" green="0.76929181810000002" blue="0.78805774449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="HlC-9J-au7" firstAttribute="leading" secondItem="Qrz-MX-6DN" secondAttribute="leading" constant="8" id="JHd-i6-lbR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HlC-9J-au7" secondAttribute="trailing" constant="8" id="TSv-c1-zn1"/>
+                                                    <constraint firstAttribute="height" constant="245" id="XOz-sQ-vmG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HlC-9J-au7" secondAttribute="bottom" constant="8" id="XbT-y9-gpr"/>
+                                                    <constraint firstItem="HlC-9J-au7" firstAttribute="top" secondItem="Qrz-MX-6DN" secondAttribute="top" constant="8" id="YuK-T8-gRD"/>
+                                                    <constraint firstAttribute="width" constant="245" id="x5r-SS-bk0"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="icon" destination="Txc-pP-NgO" id="uZa-x2-tL0"/>
+                                                    <outlet property="label" destination="JfK-LB-FUI" id="1aQ-Ar-gd9"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-mF-ab1">
+                                                <rect key="frame" x="0.0" y="253" width="300" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Pfa-e3-2XS"/>
+                                                    <constraint firstAttribute="width" constant="300" id="ULM-zC-2hf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YyW-qA-swm">
+                                        <rect key="frame" x="87" y="616" width="200" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd5-nl-shF">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                                <color key="backgroundColor" red="0.40517753359999997" green="0.5527241826" blue="0.7668325305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="Big-zW-cUy"/>
+                                                    <constraint firstAttribute="height" constant="80" id="bBs-pB-tST"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="New Game">
+                                                    <fontDescription key="titleFontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="0CX-xS-r1y"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZkX-PN-4sZ">
+                                                <rect key="frame" x="81.666666666666657" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="KEU-gh-4dW"/>
+                                                    <constraint firstAttribute="width" constant="37" id="Oh5-D8-vP6"/>
+                                                </constraints>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.75211042169999998" green="0.76929181810000002" blue="0.78805774449999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="XOz-sQ-vmG"/>
-                                    <constraint firstAttribute="bottom" secondItem="Txc-pP-NgO" secondAttribute="bottom" constant="8" id="eVK-Sr-ird"/>
-                                    <constraint firstItem="JfK-LB-FUI" firstAttribute="top" secondItem="Qrz-MX-6DN" secondAttribute="top" constant="8" id="kfR-LR-kFD"/>
-                                    <constraint firstAttribute="trailing" secondItem="JfK-LB-FUI" secondAttribute="trailing" constant="8" id="oBe-LP-Pbt"/>
-                                    <constraint firstItem="Txc-pP-NgO" firstAttribute="centerX" secondItem="Qrz-MX-6DN" secondAttribute="centerX" id="oQa-AK-PNz"/>
-                                    <constraint firstAttribute="bottom" secondItem="JfK-LB-FUI" secondAttribute="bottom" constant="8" id="pj0-bS-aCK"/>
-                                    <constraint firstItem="JfK-LB-FUI" firstAttribute="leading" secondItem="Qrz-MX-6DN" secondAttribute="leading" constant="8" id="sQd-kW-R3Z"/>
-                                    <constraint firstAttribute="width" constant="245" id="x5r-SS-bk0"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="icon" destination="Txc-pP-NgO" id="uZa-x2-tL0"/>
-                                    <outlet property="label" destination="JfK-LB-FUI" id="1aQ-Ar-gd9"/>
-                                </connections>
-                            </view>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZkX-PN-4sZ">
-                                <rect key="frame" x="188.66666666666666" y="658" width="37" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="KEU-gh-4dW"/>
-                                    <constraint firstAttribute="width" constant="37" id="Oh5-D8-vP6"/>
-                                </constraints>
-                            </activityIndicatorView>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.35389119390000001" green="0.41845911740000002" blue="0.50101017950000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZkX-PN-4sZ" secondAttribute="bottom" constant="41" id="9ec-6J-iw1"/>
-                            <constraint firstItem="Zd5-nl-shF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KIR-oJ-Edw"/>
-                            <constraint firstItem="ZkX-PN-4sZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mac-tF-MHR"/>
-                            <constraint firstItem="FIy-mF-ab1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QRt-BD-zjJ"/>
-                            <constraint firstItem="Qrz-MX-6DN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZdX-2r-VcB"/>
-                            <constraint firstItem="Qrz-MX-6DN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bxf-I3-Ax7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zd5-nl-shF" secondAttribute="bottom" constant="20" id="ej1-vy-Ae4"/>
-                            <constraint firstItem="FIy-mF-ab1" firstAttribute="top" secondItem="Qrz-MX-6DN" secondAttribute="bottom" constant="10" id="iMe-3P-D2q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RnY-Ot-jkJ" secondAttribute="trailing" constant="20" id="3gn-5A-n8s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RnY-Ot-jkJ" secondAttribute="bottom" constant="20" id="NZm-r2-0BW"/>
+                            <constraint firstItem="RnY-Ot-jkJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nl1-5B-81g"/>
+                            <constraint firstItem="RnY-Ot-jkJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lqy-05-eLW"/>
                         </constraints>
                     </view>
                     <connections>
