@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,32 +17,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-Ot-jkJ">
-                                <rect key="frame" x="20" y="20" width="374" height="696"/>
+                                <rect key="frame" x="20" y="44" width="984" height="1282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-KR-TqJ">
-                                        <rect key="frame" x="37" y="0.0" width="300" height="313"/>
+                                        <rect key="frame" x="247" y="0.0" width="490" height="558"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-MX-6DN" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                                <rect key="frame" x="27.666666666666686" y="0.0" width="245" height="245"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="490" height="490"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HlC-9J-au7">
-                                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
+                                                        <rect key="frame" x="8" y="8" width="474" height="474"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se cache donc le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-LB-FUI">
-                                                                <rect key="frame" x="16" y="0.0" width="196.66666666666666" height="186"/>
+                                                                <rect key="frame" x="10" y="0.0" width="454.5" height="396"/>
                                                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                                                </variation>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-pP-NgO">
-                                                                <rect key="frame" x="96.333333333333329" y="194" width="35.999999999999986" height="35"/>
+                                                                <rect key="frame" x="201" y="404" width="72" height="70"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="36" id="f92-it-MpR"/>
-                                                                    <constraint firstAttribute="height" constant="35" id="oSC-mQ-9hb"/>
+                                                                    <constraint firstAttribute="width" constant="36" id="f92-it-MpR">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="35" id="oSC-mQ-9hb">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                                                    </constraint>
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
@@ -52,10 +59,14 @@
                                                 <constraints>
                                                     <constraint firstItem="HlC-9J-au7" firstAttribute="leading" secondItem="Qrz-MX-6DN" secondAttribute="leading" constant="8" id="JHd-i6-lbR"/>
                                                     <constraint firstAttribute="trailing" secondItem="HlC-9J-au7" secondAttribute="trailing" constant="8" id="TSv-c1-zn1"/>
-                                                    <constraint firstAttribute="height" constant="245" id="XOz-sQ-vmG"/>
+                                                    <constraint firstAttribute="height" constant="245" id="XOz-sQ-vmG">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="490"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="bottom" secondItem="HlC-9J-au7" secondAttribute="bottom" constant="8" id="XbT-y9-gpr"/>
                                                     <constraint firstItem="HlC-9J-au7" firstAttribute="top" secondItem="Qrz-MX-6DN" secondAttribute="top" constant="8" id="YuK-T8-gRD"/>
-                                                    <constraint firstAttribute="width" constant="245" id="x5r-SS-bk0"/>
+                                                    <constraint firstAttribute="width" constant="245" id="x5r-SS-bk0">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="490"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="icon" destination="Txc-pP-NgO" id="uZa-x2-tL0"/>
@@ -63,25 +74,30 @@
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-mF-ab1">
-                                                <rect key="frame" x="0.0" y="253" width="300" height="60"/>
+                                                <rect key="frame" x="95" y="498" width="300" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Pfa-e3-2XS"/>
-                                                    <constraint firstAttribute="width" constant="300" id="ULM-zC-2hf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ULM-zC-2hf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YyW-qA-swm">
-                                        <rect key="frame" x="87" y="616" width="200" height="80"/>
+                                        <rect key="frame" x="292" y="1202" width="400" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd5-nl-shF">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="80"/>
                                                 <color key="backgroundColor" red="0.40517753359999997" green="0.5527241826" blue="0.7668325305" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="Big-zW-cUy"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Big-zW-cUy">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                                    </constraint>
                                                     <constraint firstAttribute="height" constant="80" id="bBs-pB-tST"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -94,7 +110,7 @@
                                                 </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZkX-PN-4sZ">
-                                                <rect key="frame" x="81.666666666666657" y="0.0" width="37" height="37"/>
+                                                <rect key="frame" x="181.5" y="0.0" width="37" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="KEU-gh-4dW"/>
                                                     <constraint firstAttribute="width" constant="37" id="Oh5-D8-vP6"/>
@@ -103,6 +119,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
